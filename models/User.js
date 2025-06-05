@@ -12,7 +12,7 @@ const userSchema = new mongoose.Schema({
   subscriptionPlan: {
     type: String,
     enum: ['free', 'pro', 'premium'],
-    default: 'free',
+    default: 'premium',
     required: function () {
       return this.role === 'student';
     },
